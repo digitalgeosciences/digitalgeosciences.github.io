@@ -1,0 +1,39 @@
+{
+  "site": {
+    "title": "Digital Geosciences",
+    "description": "Open, project-based research at the intersection of geoscience, AI, and sustainable development.",
+    "url": "https://digitalgeosciences.com",
+    "contact": "info@digitalgeosciences.com",
+    "address": {
+      "city": "King Fahd University of Petroleum and Minerals",
+      "postalCode": "Dhahran, 31261",
+      "country": "Saudi Arabia"
+    },
+    "github": "https://github.com/digitalgeosciences"
+  },
+  "navigation": [
+    {
+      "label": "Objectives",
+      "href": "/",
+      "section": "objectives"
+    },
+    {
+      "label": "Projects",
+      "href": "/",
+      "section": "projects"
+    },
+    {
+      "label": "Collaborators",
+      "href": "/",
+      "section": "collaborators"
+    },
+    {
+      "label": "Join",
+      "href": "/",
+      "section": "join"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/digitalgeosciences"
+  }
+}

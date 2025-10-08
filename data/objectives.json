@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "Digital Geosciences Platform",
+    "subtitle": "Open Research Platform Connecting Geoscience, AI, and Sustainable Development.",
+    "buttons": [
+      {
+        "label": "Explore objectives",
+        "variant": "primary",
+        "action": "scroll",
+        "target": "#objectives"
+      },
+      {
+        "label": "View on GitHub",
+        "variant": "secondary",
+        "action": "link",
+        "target": "https://github.com/digitalgeosciences",
+        "icon": "github"
+      }
+    ]
+  },
+  "core": {
+    "title": "Core Objectives",
+    "subtitle": "Research · Education · Consultations",
+    "objectives": [
+      {
+        "id": "research",
+        "label": "Research",
+        "theme": "research",
+        "points": [
+          "Leveraging AI and automation in geoscientific data to enhance understanding of geological processes.",
+          "Apply data-driven insights and modeling to address complex real-world challenges."
+        ]
+      },
+      {
+        "id": "education",
+        "label": "Education",
+        "theme": "education",
+        "points": [
+          "Advancing geoscience education through digital transformation and modern data management skills",
+          "Empowering students and researchers to handle every stage of the data lifecycle — from acquisition through visualization and modeling."
+        ]
+      },
+      {
+        "id": "consultations",
+        "label": "Consultations",
+        "theme": "development",
+        "points": [
+          "Offer expert guidance on the integration, harmonization, and quality control of geoscientific data.",
+          "Work with partners to analyze and interpret complex geological datasets."
+        ]
+      }
+    ]
+  }
+}

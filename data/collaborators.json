@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "Collaborators",
+    "subtitle": "",
+    "note": ""
+  },
+  "collaborators": [
+    {
+      "name": "Abdullah Alqubalee",
+      "role": "Founder and geoscientist",
+      "photo": "/images/avatars/abdullah.jpg",
+      "participation": {
+        "start": "2025-08",
+        "end": "Present",
+        "status": "active"
+      },
+      "links": {
+        "github": "https://github.com/qubalee",
+        "website": "https://qubalee.com",
+        "linkedin": "https://linkedin.com/in/qubalee",
+        "twitter": ""
+      }
+    }
+  ]
+}

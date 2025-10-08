@@ -1,0 +1,36 @@
+{
+  "header": {
+    "title": "Team Projects",
+    "subtitle": "Short links to tools, datasets, and publications"
+  },
+  "projects": [
+    {
+      "id": "qemscan",
+      "title": "QEMSCAN Pipeline",
+      "description": "Automated mineralogical analysis workflow.",
+      "url": "https://geo.lab/qemscan",
+      "icon": "microscope"
+    },
+    {
+      "id": "rockvision",
+      "title": "RockVision",
+      "description": "Thin section classifier powered by deep learning.",
+      "url": "https://geo.lab/rockvision",
+      "icon": "eye"
+    },
+    {
+      "id": "geohub",
+      "title": "GeoHub",
+      "description": "Data catalog + lifecycle management toolkit.",
+      "url": "https://geo.lab/geohub",
+      "icon": "database"
+    },
+    {
+      "id": "field2model",
+      "title": "Field2Model",
+      "description": "From acquisition to modeling in a reproducible stack.",
+      "url": "https://geo.lab/field2model",
+      "icon": "layers"
+    }
+  ]
+}

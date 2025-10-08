@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Join or Lead a Project",
+    "subtitle": "Lightweight proposal · Fast review · Open collaboration"
+  },
+  "eligibility": {
+    "title": "Eligibility & Alignment",
+    "description": "Anyone can participate or lead as long as the project aligns with our core objectives in Research, Education, or Consultations.",
+    "requirements": [
+      "Clear objective mapped to Research, Education, or Consultations",
+      "Data lifecycle plan (acquisition → curation → visualization → modeling)",
+      "Open-source or open-access preference for outputs"
+    ]
+  },
+  "form": {
+    "title": "Proposal (quick form)",
+    "note": "This demo form can be wired to an email or API endpoint in production.",
+    "fields": [
+      {
+        "id": "name",
+        "label": "Your name",
+        "type": "text",
+        "required": true,
+        "placeholder": "Your name"
+      },
+      {
+        "id": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true,
+        "placeholder": "lab@example.edu"
+      },
+      {
+        "id": "title",
+        "label": "Project title",
+        "type": "text",
+        "required": true,
+        "placeholder": "Project title"
+      },
+      {
+        "id": "description",
+        "label": "Description",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "Problem, data, methods, expected outcomes",
+        "rows": 6
+      }
+    ],
+    "submitButton": {
+      "label": "Submit proposal (opens email)",
+      "action": "email"
+    }
+  }
+}
