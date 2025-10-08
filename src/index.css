@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Digital Geosciences Lab Design System - Clean Academic Theme */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 213 16% 24%;
+    
+    /* Academic Blue Theme */
+    --primary: 213 89% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 213 89% 95%;
+    
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 213 16% 24%;
+    --card-border: 213 13% 91%;
+    
+    /* Research Theme (Blue) */
+    --research: 213 89% 42%;
+    --research-bg: 213 89% 96%;
+    --research-foreground: 213 89% 20%;
+    
+    /* Education Theme (Green) */
+    --education: 142 76% 36%;
+    --education-bg: 142 76% 95%;
+    --education-foreground: 142 76% 20%;
+    
+    /* Development Theme (Orange) */
+    --development: 25 95% 53%;
+    --development-bg: 25 95% 96%;
+    --development-foreground: 25 95% 20%;
+    
+    /* Neutral Grays */
+    --muted: 213 13% 96%;
+    --muted-foreground: 213 13% 45%;
+    --muted-dark: 213 13% 85%;
+    
+    /* Interactive Elements */
+    --accent: 213 89% 42%;
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 213 89% 95%;
+    
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Form Elements */
+    --border: 213 13% 91%;
+    --input: 213 13% 96%;
+    --input-border: 213 13% 85%;
+    --ring: 213 89% 42%;
+
+    /* Border Radius */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Spacing System */
+    --spacing-section: 3rem;
+    --spacing-content: 1.5rem;
+    
+    /* Typography */
+    --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(213 13% 45% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(213 13% 45% / 0.1), 0 2px 4px -1px hsl(213 13% 45% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(213 13% 45% / 0.1), 0 4px 6px -2px hsl(213 13% 45% / 0.05);
+    --shadow-card: 0 1px 3px 0 hsl(213 13% 45% / 0.1), 0 1px 2px 0 hsl(213 13% 45% / 0.06);
+    
+    /* Transitions */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
