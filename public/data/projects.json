@@ -9,28 +9,32 @@
       "title": "Notes",
       "description": "Geoscience Research and Educational Notes.",
       "url": "https://qubalee.com",
-      "icon": "book"
+      "icon": "book",
+      "external": true
     },
     {
       "id": "AML",
       "title": "Lab Manager",
       "description": "Automated Mineralogy Lab.",
       "url": "https://cpg.kfupm.edu.sa/aml",
-      "icon": "microscope"
+      "icon": "microscope",
+      "external": true
     },
     {
       "id": "GeoPodcast",
       "title": "GeoPodcast",
       "description": "A geoscience podcast.",
       "url": "https://creators.spotify.com/pod/profile/qubalee/",
-      "icon": "podcast"
+      "icon": "podcast",
+      "external": true
     },
     {
       "id": "localAI",
       "title": "local AI",
       "description": "Local Generative AI Chatbots (upon request)",
       "url": "https://geo.local:3000",
-      "icon": "laptop"
+      "icon": "ai",
+      "external": true
     }
   ]
 }

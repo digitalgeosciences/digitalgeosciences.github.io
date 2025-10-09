@@ -20,7 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/projects/qemscan" element={<QemScan />} />
+          <Route path="/projects/qemscan" element={<notes />} />
           <Route path="/projects/rockvision" element={<RockVision />} />
           <Route path="/projects/geohub" element={<GeoHub />} />
           <Route path="/projects/field2model" element={<Field2Model />} />
