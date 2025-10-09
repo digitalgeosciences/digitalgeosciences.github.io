@@ -14,7 +14,7 @@
   },
   "form": {
     "title": "Proposal (quick form)",
-    "note": "This demo form can be wired to an email or API endpoint in production.",
+    "note": "Please share a brief description of the idea you would like to implement..",
     "fields": [
       {
         "id": "name",
@@ -42,12 +42,12 @@
         "label": "Description",
         "type": "textarea",
         "required": true,
-        "placeholder": "Problem, data, methods, expected outcomes",
+        "placeholder": "A brief description",
         "rows": 6
       }
     ],
     "submitButton": {
-      "label": "Submit proposal (opens email)",
+      "label": "Submit your proposal",
       "action": "email"
     }
   }
