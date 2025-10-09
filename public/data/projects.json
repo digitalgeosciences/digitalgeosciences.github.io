@@ -14,7 +14,7 @@
     },
     {
       "id": "AML",
-      "title": "Lab Manager",
+      "title": "LabManager",
       "description": "A web-based platform to manage research laboratories. This is an ongoing project, but its concept is currently operational at the Automated Mineralogy Lab.",
       "url": "https://cpg.kfupm.edu.sa/aml",
       "icon": "microscope",
