@@ -6,8 +6,8 @@
   "projects": [
     {
       "id": "notes",
-      "title": "Notes",
-      "description": "Geoscience Research and Educational Notes.",
+      "title": "Geoscientifc Notes",
+      "description": "Web-based platform to publish geoscience research and educational notes. Explore 'ALQUBALEE Notes' as an example.",
       "url": "https://qubalee.com",
       "icon": "book",
       "external": true
@@ -15,7 +15,7 @@
     {
       "id": "AML",
       "title": "Lab Manager",
-      "description": "Automated Mineralogy Lab.",
+      "description": "A web-based platform to manage research laboratories. This is an ongoing project, but its concept is currently operational at the Automated Mineralogy Lab.",
       "url": "https://cpg.kfupm.edu.sa/aml",
       "icon": "microscope",
       "external": true
@@ -23,15 +23,15 @@
     {
       "id": "GeoPodcast",
       "title": "GeoPodcast",
-      "description": "A geoscience podcast.",
+      "description": "A geoscience podcast (AI DeepDive).",
       "url": "https://creators.spotify.com/pod/profile/qubalee/",
       "icon": "podcast",
       "external": true
     },
     {
       "id": "localAI",
-      "title": "local AI",
-      "description": "Local Generative AI Chatbots (upon request)",
+      "title": "Local AI Platform",
+      "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation",
       "url": "https://geo.local:3000",
       "icon": "ai",
       "external": true
