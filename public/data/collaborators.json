@@ -6,18 +6,50 @@
   },
   "collaborators": [
     {
-      "name": "Abdullah Alqubalee",
-      "role": "Founder and geoscientist",
+      "name": "Dr. Abdullah Alqubalee",
+      "role": "Founder/Geoscientist",
       "photo": "/images/avatars/abdullah.jpg",
+      "participation": {
+        "start": "2024-10",
+        "end": "Present",
+        "status": "active"
+      },
+      "links": {
+        "github": "https://github.com/qubalee",
+        "website": "https://qubalee.com/about",
+        "linkedin": "https://linkedin.com/in/qubalee",
+        "twitter": ""
+      }
+    },
+        {
+      "name": "Dr. Moujahed Al-Husseini",
+      "role": "MEGTScale Pioneer",
+      "photo": "/images/avatars/Moujahed-Al-Husseini.jpg",
+      "participation": {
+        "start": "2025-01",
+        "end": "Present",
+        "status": "active"
+      },
+      "links": {
+        "github": "",
+        "website": "https://www.researchgate.net/profile/Moujahed-Al-Husseini",
+        "linkedin": "",
+        "twitter": ""
+      }
+    },
+        {
+      "name": "Dr. Denis Anikiev",
+      "role": "Geoscientist/GenAI",
+      "photo": "/images/avatars/Denis_Anikiev.jpg",
       "participation": {
         "start": "2025-08",
         "end": "Present",
         "status": "active"
       },
       "links": {
-        "github": "https://github.com/qubalee",
-        "website": "https://qubalee.com",
-        "linkedin": "https://linkedin.com/in/qubalee",
+        "github": "https://github.com/danikiev",
+        "website": "https://cpg.kfupm.edu.sa/bio/dr-denis-anikiev/",
+        "linkedin": "https://www.linkedin.com/in/denis-anikiev-81690324/",
         "twitter": ""
       }
     }
