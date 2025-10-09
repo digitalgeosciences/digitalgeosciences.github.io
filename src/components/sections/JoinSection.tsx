@@ -36,7 +36,7 @@ interface JoinData {
   };
 }
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzvdi5OZlvX-D4nPVgSbBBYtLlbads1VHoEYFU8STZwyW_MerQwah08VvlYUSBB8ICpfQ/exec'; // <-- paste your URL
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQtoE6lN3_XLVifyn6QFjh0y_FNfPdjbsL65dfRIGBa5205YEIlYi684GmMRvR_Q4nHQ/exec'; // <-- paste your URL
 
 const JoinSection = () => {
   const [data, setData] = useState<JoinData | null>(null);
