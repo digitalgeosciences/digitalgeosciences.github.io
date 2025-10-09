@@ -35,6 +35,22 @@
       "url": "https://geo.local:3000",
       "icon": "ai",
       "external": true
+    },
+    {
+      "id": "MEGTScale",
+      "title": "Middle East Geologic Time Scale",
+      "description": "Middle East Geologic Time Scale. This project is under active development by Dr. Moujahed Al-Husseini and Dr. Abdullah Alqubalee.",
+      "url": "https://megtscale.com",
+      "icon": "ai",
+      "external": true
+    },
+    {
+      "id": "GeoArabia",
+      "title": "Geoscience Arabia",
+      "description": "GeoArabia Community (coming soon!)",
+      "url": "https://geoarabia.com",
+      "icon": "ai",
+      "external": true
     }
   ]
 }
