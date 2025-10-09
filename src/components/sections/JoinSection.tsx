@@ -88,7 +88,7 @@ const JoinSection = () => {
       if (data.ok) {
         toast({
           title: "Proposal submitted!",
-          description: "Your details were saved to our Google Sheet.",
+          description: "Thank you!.",
         });
         setSubmitEmail(formData.email || "");
         setSubmitted(true);
