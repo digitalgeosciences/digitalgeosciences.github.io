@@ -36,24 +36,25 @@ interface JoinData {
   };
 }
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJU_xy7FoJINMVX8pwJYuTan7LH5Cv3Z8qrHNyteGNtPETtJo9C7bthgpjyYUXRt2U2g/exec'; // <-- paste your URL
+const APPS_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwxko3vo9RU0QXlQESXTgzmCxzQb3HHrBSwDVkQjG8tsyq8zQgpnNI17dyXBGHieHVa/exec"; // <-- your Google Apps Script URL
 
 const JoinSection = () => {
   const [data, setData] = useState<JoinData | null>(null);
   const [formData, setFormData] = useState<Record<string, string>>({});
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-  const [submitEmail, setSubmitEmail] = useState<string>('');
+  const [submitEmail, setSubmitEmail] = useState<string>("");
 
   useEffect(() => {
-    fetch('/data/join.json')
-      .then(res => res.json())
+    fetch("/data/join.json")
+      .then((res) => res.json())
       .then(setData)
       .catch(console.error);
   }, []);
 
   const handleInputChange = (id: string, value: string) => {
-    setFormData(prev => ({ ...prev, [id]: value }));
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   // === UPDATED handleSubmit ===
@@ -70,15 +71,16 @@ const JoinSection = () => {
     }
 
     try {
+      // 🧠 Send as URL-encoded form data (NOT JSON)
       const res = await fetch(APPS_SCRIPT_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
           name: formData.name,
           email: formData.email,
           title: formData.title,
-          description: formData.description || ""
-        }),
+          description: formData.description || "",
+        }).toString(),
       });
 
       const data = await res.json();
@@ -88,7 +90,7 @@ const JoinSection = () => {
           title: "Proposal submitted!",
           description: "Your details were saved to our Google Sheet.",
         });
-        setSubmitEmail(formData.email || '');
+        setSubmitEmail(formData.email || "");
         setSubmitted(true);
         setFormData({});
       } else {
@@ -153,11 +155,20 @@ const JoinSection = () => {
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 mr-3 text-green-600" />
                   <div>
-                    <h4 className="font-semibold mb-1">Thanks! We’ve received your submission.</h4>
+                    <h4 className="font-semibold mb-1">
+                      Thanks! We’ve received your submission.
+                    </h4>
                     <p className="text-sm text-muted-foreground">
-                      A confirmation email has been sent{submitEmail ? ` to ${submitEmail}` : ''}. You can close this page or submit another proposal below.
+                      A confirmation email has been sent
+                      {submitEmail ? ` to ${submitEmail}` : ""}. You can close
+                      this page or submit another proposal below.
                     </p>
-                    <Button className="mt-4" onClick={() => setSubmitted(false)}>Submit another proposal</Button>
+                    <Button
+                      className="mt-4"
+                      onClick={() => setSubmitted(false)}
+                    >
+                      Submit another proposal
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -165,9 +176,14 @@ const JoinSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {data.form.fields.map((field) => (
                   <div key={field.id}>
-                    <Label htmlFor={field.id} className="text-foreground font-medium">
+                    <Label
+                      htmlFor={field.id}
+                      className="text-foreground font-medium"
+                    >
                       {field.label}
-                      {field.required && <span className="text-destructive ml-1">*</span>}
+                      {field.required && (
+                        <span className="text-destructive ml-1">*</span>
+                      )}
                     </Label>
                     {field.type === "textarea" ? (
                       <Textarea
@@ -175,8 +191,10 @@ const JoinSection = () => {
                         placeholder={field.placeholder}
                         required={field.required}
                         rows={field.rows || 4}
-                        value={formData[field.id] || ''}
-                        onChange={(e) => handleInputChange(field.id, e.target.value)}
+                        value={formData[field.id] || ""}
+                        onChange={(e) =>
+                          handleInputChange(field.id, e.target.value)
+                        }
                         className="mt-2 bg-input border-input-border"
                       />
                     ) : (
@@ -185,16 +203,18 @@ const JoinSection = () => {
                         type={field.type}
                         placeholder={field.placeholder}
                         required={field.required}
-                        value={formData[field.id] || ''}
-                        onChange={(e) => handleInputChange(field.id, e.target.value)}
+                        value={formData[field.id] || ""}
+                        onChange={(e) =>
+                          handleInputChange(field.id, e.target.value)
+                        }
                         className="mt-2 bg-input border-input-border"
                       />
                     )}
                   </div>
                 ))}
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                   size="lg"
                 >
