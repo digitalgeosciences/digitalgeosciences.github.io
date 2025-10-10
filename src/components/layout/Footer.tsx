@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Mail, MapPin, Github, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Github, Globe, ExternalLink } from "lucide-react";
 
 interface SiteConfig {
   site: {
@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                <a 
+                <a
                   href={`mailto:${config.site.contact}`}
                   className="text-primary hover:text-primary/80 hover:underline transition-colors"
                 >
@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-2">
                 <ExternalLink className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                <a 
+                <a
                   href={`https://${config.site.url.replace('https://', '')}`}
                   className="text-primary hover:text-primary/80 hover:underline transition-colors"
                   target="_blank"
@@ -75,18 +75,30 @@ const Footer = () => {
           </div>
 
           {/* Supporters */}
+
           <div className="space-y-4">
             <h3 className="font-semibold text-lg text-foreground mb-6">Supporters</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2 group">
                 <Github className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                <a 
-                  href={config.site.github}
+                <a
+                  href="https://pages.github.com/"
                   className="text-primary hover:text-primary/80 hover:underline transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  GitHub Pages
+                </a>
+              </div>
+              <div className="flex items-center space-x-2 group">
+                <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                <a
+                  href="https://cpg.kfupm.edu.sa/"
+                  className="text-primary hover:text-primary/80 hover:underline transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CPG KFUPM
                 </a>
               </div>
             </div>
@@ -97,10 +109,10 @@ const Footer = () => {
         <div className="text-center text-sm text-muted-foreground pt-8 border-t border-card-border">
           <p className="leading-relaxed">
             © 2025 {config.site.title}. Born at{" "}
-            <a 
-              href="https://www.kfupm.edu.sa/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.kfupm.edu.sa/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-primary hover:text-primary/80 hover:underline transition-colors font-medium"
             >
               KFUPM
