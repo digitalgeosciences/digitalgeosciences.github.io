@@ -37,7 +37,7 @@ interface JoinData {
 }
 
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwxko3vo9RU0QXlQESXTgzmCxzQb3HHrBSwDVkQjG8tsyq8zQgpnNI17dyXBGHieHVa/exec"; // <-- your Google Apps Script URL
+  "https://script.google.com/macros/s/AKfycbzF5eiq2xV6aekszIf5eKtx0MlDRsFFaBkfrw12ozCG_ztJiFwHGPDelyLwDVQ3bUFy/exec"; // <-- your Google Apps Script URL
 
 const JoinSection = () => {
   const [data, setData] = useState<JoinData | null>(null);
