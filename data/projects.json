@@ -63,7 +63,7 @@
     {
       "id": "GeoPrompts",
       "title": "GeoPrompts",
-      "description": "An image library of Earth's imagined features, based on geoscientists' descriptions and visualized with large language models (LLMs)—coming soon!",
+      "description": "A prompt library of Earth's imagined features, based on geoscientists' descriptions and visualized with large language models (LLMs)—coming soon!",
       "url": "#",
       "icon": "eye",
       "external": true
