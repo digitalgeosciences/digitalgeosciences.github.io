@@ -45,7 +45,7 @@ const JoinSection = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
   const [submitEmail, setSubmitEmail] = useState<string>("");
-  const [loading, setLoading] = useState(false); //
+  const [loading, setLoading] = useState(false); // ✅ spinner state
 
   useEffect(() => {
     fetch("/data/join.json")
@@ -58,7 +58,6 @@ const JoinSection = () => {
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  // === UPDATED handleSubmit ===
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -71,8 +70,9 @@ const JoinSection = () => {
       return;
     }
 
+    setLoading(true); // ✅ show spinner
+
     try {
-      // 🧠 Send as URL-encoded form data (NOT JSON)
       const res = await fetch(APPS_SCRIPT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -89,7 +89,7 @@ const JoinSection = () => {
       if (data.ok) {
         toast({
           title: "Proposal submitted!",
-          description: "Thank you!.",
+          description: "Thank you!",
         });
         setSubmitEmail(formData.email || "");
         setSubmitted(true);
@@ -103,6 +103,8 @@ const JoinSection = () => {
         description: err?.message || "Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setLoading(false); // ✅ hide spinner
     }
   };
 
@@ -124,6 +126,7 @@ const JoinSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
+          {/* Left Side */}
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-4 font-heading">
               {data.eligibility.title}
@@ -143,6 +146,7 @@ const JoinSection = () => {
             </ul>
           </div>
 
+          {/* Right Side */}
           <div className="bg-card border border-card-border rounded-lg p-8 shadow-card">
             <h3 className="text-2xl font-bold text-foreground mb-2 font-heading">
               {data.form.title}
@@ -214,6 +218,7 @@ const JoinSection = () => {
                   </div>
                 ))}
 
+                {/* ✅ Spinner-enabled button */}
                 <Button
                   type="submit"
                   className="w-full bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center"
@@ -235,12 +240,12 @@ const JoinSection = () => {
                           r="10"
                           stroke="currentColor"
                           strokeWidth="4"
-                        ></circle>
+                        />
                         <path
                           className="opacity-75"
                           fill="currentColor"
                           d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                        ></path>
+                        />
                       </svg>
                       Sending...
                     </>
