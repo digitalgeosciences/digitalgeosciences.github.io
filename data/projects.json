@@ -15,7 +15,7 @@
     {
       "id": "AML",
       "title": "LabManager",
-      "description": "A web-based platform to manage research laboratories. This is an ongoing project, but its concept is currently operational at the Automated Mineralogy Lab.",
+      "description": "A web-based platform to manage research laboratories. This ongoing project is led by Dr. Alqubalee, and its concept is currently operational at the Automated Mineralogy Lab.",
       "url": "https://cpg.kfupm.edu.sa/aml",
       "icon": "microscope",
       "external": true
@@ -39,7 +39,7 @@
     {
       "id": "MEGTScale",
       "title": "MEGTScale",
-      "description": "Middle East Geologic Time Scale.",
+      "description": "The Middle East Geologic Time Scale project, led by Dr. Al-Husseini and Dr. Alqubalee, aims to enhance the understanding of the region's geological history.",
       "url": "https://megtscale.com",
       "icon": "layers",
       "external": true
@@ -47,7 +47,7 @@
     {
       "id": "GeoArabia",
       "title": "Geoscience Arabia",
-      "description": "GeoArabia Community (coming soon!)",
+      "description": "GeoArabia Community—coming soon!",
       "url": "https://geoarabia.com",
       "icon": "map",
       "external": true
@@ -55,15 +55,15 @@
     {
       "id": "Geogallery",
       "title": "Geoscience Gallery",
-      "description": "Explore our geological photo collection (coming soon!)",
+      "description": "Explore our geological photo collection—coming soon!",
       "url": "#",
       "icon": "mountain",
       "external": true
     },
     {
       "id": "GeoPrompts",
-      "title": "Geoscience Prompts",
-      "description": "A visual library of Earth's imagined features (coming soon!)",
+      "title": "GeoPrompts",
+      "description": "An image library of Earth's imagined features, based on geoscientists' descriptions and visualized with large language models (LLMs)—coming soon!",
       "url": "#",
       "icon": "eye",
       "external": true
