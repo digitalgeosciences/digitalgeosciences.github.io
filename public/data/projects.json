@@ -32,7 +32,7 @@
       "id": "localAI",
       "title": "Local AI Platform",
       "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation",
-      "url": "https://geo.local:3000",
+      "url": "https://geo.local",
       "icon": "ai",
       "external": true
     },
