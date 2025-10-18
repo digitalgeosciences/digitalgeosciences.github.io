@@ -7,7 +7,7 @@
   "collaborators": [
     {
       "name": "Dr. Abdullah Alqubalee",
-      "role": "Founder/Geoscientist",
+      "role": "Founder",
       "photo": "/images/avatars/abdullah.jpg",
       "participation": {
         "start": "2024-10",
@@ -23,7 +23,7 @@
     },
         {
       "name": "Dr. Moujahed Al-Husseini",
-      "role": "MEGTScale Lead",
+      "role": "MEGTScale Facilitator",
       "photo": "/images/avatars/Moujahed-Al-Husseini.jpg",
       "participation": {
         "start": "2025-01",
@@ -39,7 +39,7 @@
     },
         {
       "name": "Dr. Denis Anikiev",
-      "role": "Geoscientist/GenAI",
+      "role": "GeoPrompts Contributor",
       "photo": "/images/avatars/Denis_Anikiev.jpg",
       "participation": {
         "start": "2025-08",
