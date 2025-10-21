@@ -80,17 +80,6 @@ const Footer = () => {
             <h3 className="font-semibold text-lg text-foreground mb-6">Supporters</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2 group">
-                <Github className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
-                <a
-                  href="https://pages.github.com/"
-                  className="text-primary hover:text-primary/80 hover:underline transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub Pages
-                </a>
-              </div>
-              <div className="flex items-center space-x-2 group">
                 <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 <a
                   href="https://cpg.kfupm.edu.sa/"
