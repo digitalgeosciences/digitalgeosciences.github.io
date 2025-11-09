@@ -12,8 +12,8 @@ const GeoPrompts = () => {
       <Header />
       
       <PageHeader 
-        title="GeoPrompts"
-        subtitle="Under development — an experimental GeoPrompts platform"
+        title="GeoGallery"
+        subtitle="Under development — an experimental GeoGallery"
         icon={<Eye className="h-8 w-8 text-primary" />}
       >
         <div className="flex flex-wrap gap-4 mt-6">
@@ -46,7 +46,7 @@ const GeoPrompts = () => {
             </CardHeader>
             <CardContent className="prose prose-neutral dark:prose-invert max-w-none">
               <p>
-                GeoPrompts is currently under development. 
+                GeoGallery is currently under development. 
               </p>
             </CardContent>
           </Card>
@@ -68,7 +68,7 @@ const GeoPrompts = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                GeoPrompts is in its early development stage. Check back soon for updates, demos, and documentation.
+                GeoGallery is in its early development stage. Check back soon for updates, demos, and documentation.
               </p>
             </CardContent>
           </Card>
