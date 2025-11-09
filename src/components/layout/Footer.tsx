@@ -82,12 +82,12 @@ const Footer = () => {
               <div className="flex items-center space-x-2 group">
                 <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
                 <a
-                  href="https://cpg.kfupm.edu.sa/"
+                  href="https://geoarabia.com/"
                   className="text-primary hover:text-primary/80 hover:underline transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  CPG KFUPM
+                  GeoArabia Community
                 </a>
               </div>
             </div>
@@ -97,16 +97,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-sm text-muted-foreground pt-8 border-t border-card-border">
           <p className="leading-relaxed">
-            © 2025 {config.site.title}. Born at{" "}
-            <a
-              href="https://www.kfupm.edu.sa/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 hover:underline transition-colors font-medium"
-            >
-              KFUPM
-            </a>
-            {" "}with open science values.
+            © 2025 {config.site.title}. Born with open science values.
           </p>
         </div>
       </div>
