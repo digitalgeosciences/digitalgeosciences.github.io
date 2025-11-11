@@ -13,6 +13,14 @@
       "external": true
     },
     {
+      "id": "OpenGeo",
+      "title": "Open Geosciences",
+      "description": "A living index of open geoscience software, datasets, and courses that keeps researchers, educators, and students aligned on the latest collaborative tools.",
+      "url": "https://digitalgeosciences.com/opengeo",
+      "icon": "layers",
+      "external": true
+    },
+    {
       "id": "AML",
       "title": "LabManager",
       "description": "A web-based platform to manage research laboratories. This ongoing project is led by Dr. Alqubalee, and its concept is currently operational at the Automated Mineralogy Lab.",
