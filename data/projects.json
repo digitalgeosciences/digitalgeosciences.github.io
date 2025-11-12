@@ -6,7 +6,7 @@
   "projects": [
     {
       "id": "notes",
-      "title": "Geoscientifc Notes",
+      "title": "Geoscientific Notes",
       "description": "Web-based platform to publish geoscience research and educational notes. Explore 'ALQUBALEE Notes' as an example.",
       "url": "https://qubalee.com",
       "icon": "book",
@@ -17,7 +17,7 @@
       "title": "Open Geosciences",
       "description": "A living index of open geoscience software, datasets, and courses that keeps researchers, educators, and students aligned on the latest collaborative tools.",
       "url": "https://digitalgeosciences.com/opengeo",
-      "icon": "layers",
+      "icon": "globe",
       "external": true
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "localAI",
       "title": "Local AI Platform",
-      "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation",
+      "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation.",
       "url": "https://geo.local",
       "icon": "ai",
       "external": true
@@ -55,7 +55,7 @@
     {
       "id": "GeoArabia",
       "title": "Geoscience Arabia",
-      "description": "GeoArabia Community—coming soon!",
+      "description": "GeoArabia Community - coming soon!",
       "url": "https://geoarabia.com",
       "icon": "map",
       "external": true
@@ -63,18 +63,18 @@
     {
       "id": "Geogallery",
       "title": "GeoGallery",
-      "description": "Explore our geological photo collection—coming soon!",
+      "description": "Explore our geological photo collection - coming soon!",
       "url": "#",
       "icon": "mountain",
-      "external": true
+      "external": false
     },
     {
       "id": "GeoPrompts",
       "title": "GeoPrompts",
-      "description": "A prompt library of Earth's imagined features, based on geoscientists' descriptions and visualized with large language models (LLMs)—coming soon!",
+      "description": "A prompt library of Earth's imagined features, based on geoscientists' descriptions and visualized with large language models (LLMs) - coming soon!",
       "url": "#",
       "icon": "eye",
-      "external": true
+      "external": false
     }
   ]
 }
