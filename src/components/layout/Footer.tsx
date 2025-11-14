@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-sm text-muted-foreground pt-8 border-t border-card-border">
           <p className="leading-relaxed">
-            © 2025 {config.site.title}. Born with open science values.
+            © 2025 {config.site.title}.
           </p>
         </div>
       </div>

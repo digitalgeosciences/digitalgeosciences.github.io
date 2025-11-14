@@ -56,7 +56,7 @@ const ProjectsSection = () => {
 
   const getIcon = (iconName: string) => {
     switch (iconName?.toLowerCase()) {
-      // 🧪 Laboratory & Analytical
+      // Laboratory & Analytical
       case "microscope":
         return <Microscope className="h-6 w-6 text-blue-600" />;
       case "flask":
@@ -69,7 +69,7 @@ const ProjectsSection = () => {
       case "data":
         return <Database className="h-6 w-6 text-emerald-600" />;
 
-      // 📚 Research, Notes & Publications
+      // Research, Notes & Publications
       case "book":
         return <Book className="h-6 w-6 text-amber-600" />;
       case "article":
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
       case "notes":
         return <FileText className="h-6 w-6 text-orange-600" />;
 
-      // 🗺️ Mapping, GIS & Field Work
+      // Mapping, GIS & Field Work
       case "map":
         return <Map className="h-6 w-6 text-green-700" />;
       case "globe":
@@ -93,12 +93,12 @@ const ProjectsSection = () => {
       case "terrain":
         return <Mountain className="h-6 w-6 text-gray-600" />;
 
-      // 💧 Hydrology & Environment
+      // Hydrology & Environment
       case "water":
       case "hydro":
         return <Droplets className="h-6 w-6 text-cyan-500" />;
 
-      // 💻 Digital, AI & Platforms
+      // Digital, AI & Platforms
       case "ai":
       case "ml":
       case "model":
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
       case "platform":
         return <Laptop className="h-6 w-6 text-blue-500" />;
 
-      // 🎙️ Outreach, Education & Visualization
+      // Outreach, Education & Visualization
       case "podcast":
         return <Podcast className="h-6 w-6 text-pink-600" />;
       case "eye":
@@ -120,12 +120,12 @@ const ProjectsSection = () => {
       case "teaching":
         return <Book className="h-6 w-6 text-violet-600" />;
 
-      // 📏 Measurement & Tools
+      // Measurement & Tools
       case "measurement":
       case "scale":
         return <Ruler className="h-6 w-6 text-gray-500" />;
 
-      // 🌍 General / Default
+      // General / Default
       default:
         return <Package className="h-6 w-6 text-gray-500" />;
     }

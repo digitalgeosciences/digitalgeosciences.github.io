@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
-import { UserPlus, CheckCircle, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-
-interface FormField {
-  id: string;
-  label: string;
-  type: string;
-  required: boolean;
-  placeholder: string;
-  rows?: number;
-}
+import {
+  UserPlus,
+  CheckCircle,
+  MessageCircle,
+  Users,
+  Link2,
+} from "lucide-react";
 
 interface JoinData {
   header: {
@@ -25,27 +17,38 @@ interface JoinData {
     description: string;
     requirements: string[];
   };
-  form: {
+  cta: {
     title: string;
+    description: string;
+    whyTitle: string;
+    highlights: string[];
     note: string;
-    fields: FormField[];
-    submitButton: {
-      label: string;
-      action: string;
+    buttons: {
+      startLabel: string;
+      browseLabel: string;
     };
   };
 }
 
-const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbyS43FDxEho02X4i_R-L6wKj2F95AGNwxrvdvZ3o63udItzxObVEInDLjzUs-aeeIcC/exec"; // <-- your Google Apps Script URL
+interface SiteConfig {
+  site: {
+    title: string;
+    contact: string;
+    url: string;
+    address: {
+      city: string;
+      postalCode: string;
+      country: string;
+    };
+    github: string;
+  };
+}
+
+const highlightIcons = [MessageCircle, Users, Link2];
 
 const JoinSection = () => {
   const [data, setData] = useState<JoinData | null>(null);
-  const [formData, setFormData] = useState<Record<string, string>>({});
-  const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
-  const [submitEmail, setSubmitEmail] = useState<string>("");
-  const [loading, setLoading] = useState(false); // ✅ spinner state
+  const [siteConfig, setSiteConfig] = useState<SiteConfig | null>(null);
 
   useEffect(() => {
     fetch("/data/join.json")
@@ -54,61 +57,22 @@ const JoinSection = () => {
       .catch(console.error);
   }, []);
 
-  const handleInputChange = (id: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.name || !formData.email || !formData.title) {
-      toast({
-        title: "Missing info",
-        description: "Please fill in Name, Email, and Project title.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setLoading(true); // ✅ show spinner
-
-    try {
-      const res = await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          name: formData.name,
-          email: formData.email,
-          title: formData.title,
-          description: formData.description || "",
-        }).toString(),
-      });
-
-      const data = await res.json();
-
-      if (data.ok) {
-        toast({
-          title: "Proposal submitted!",
-          description: "Thank you!",
-        });
-        setSubmitEmail(formData.email || "");
-        setSubmitted(true);
-        setFormData({});
-      } else {
-        throw new Error(data.error || "Unknown error");
-      }
-    } catch (err: any) {
-      toast({
-        title: "Submission failed",
-        description: err?.message || "Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false); // ✅ hide spinner
-    }
-  };
+  useEffect(() => {
+    fetch("/data/site-config.json")
+      .then((res) => res.json())
+      .then(setSiteConfig)
+      .catch(console.error);
+  }, []);
 
   if (!data) return null;
+
+  const discussionLinks = {
+    start: "https://github.com/orgs/digitalgeosciences/discussions/new?category=new-proposals",
+    browse: "https://github.com/orgs/digitalgeosciences/discussions",
+  };
+  const buttonsDisabled = false;
+  const buttonDisabledClasses = "";
+  const contactEmail = siteConfig?.site.contact;
 
   return (
     <section id="join" className="py-section">
@@ -126,7 +90,6 @@ const JoinSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Left Side */}
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-4 font-heading">
               {data.eligibility.title}
@@ -146,118 +109,73 @@ const JoinSection = () => {
             </ul>
           </div>
 
-          {/* Right Side */}
-          <div className="bg-card border border-card-border rounded-lg p-8 shadow-card">
-            <h3 className="text-2xl font-bold text-foreground mb-2 font-heading">
-              {data.form.title}
+          <div className="bg-card border border-card-border rounded-3xl p-8 shadow-card">
+            <h3 className="text-2xl font-bold text-foreground mb-3 font-heading">
+              {data.cta.title}
             </h3>
-            <p className="text-sm text-muted-foreground mb-6">
-              {data.form.note}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {data.cta.description}
             </p>
 
-            {submitted ? (
-              <div className="rounded-lg border border-card-border p-6 bg-muted/30 text-foreground">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 mr-3 text-green-600" />
-                  <div>
-                    <h4 className="font-semibold mb-1">
-                      Thanks! We’ve received your submission.
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      A confirmation email has been sent
-                      {submitEmail ? ` to ${submitEmail}` : ""}. You can close
-                      this page or submit another proposal below.
-                    </p>
-                    <Button
-                      className="mt-4"
-                      onClick={() => setSubmitted(false)}
-                    >
-                      Submit another proposal
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {data.form.fields.map((field) => (
-                  <div key={field.id}>
-                    <Label
-                      htmlFor={field.id}
-                      className="text-foreground font-medium"
-                    >
-                      {field.label}
-                      {field.required && (
-                        <span className="text-destructive ml-1">*</span>
-                      )}
-                    </Label>
-                    {field.type === "textarea" ? (
-                      <Textarea
-                        id={field.id}
-                        placeholder={field.placeholder}
-                        required={field.required}
-                        rows={field.rows || 4}
-                        value={formData[field.id] || ""}
-                        onChange={(e) =>
-                          handleInputChange(field.id, e.target.value)
-                        }
-                        className="mt-2 bg-input border-input-border"
-                      />
-                    ) : (
-                      <Input
-                        id={field.id}
-                        type={field.type}
-                        placeholder={field.placeholder}
-                        required={field.required}
-                        value={formData[field.id] || ""}
-                        onChange={(e) =>
-                          handleInputChange(field.id, e.target.value)
-                        }
-                        className="mt-2 bg-input border-input-border"
-                      />
-                    )}
-                  </div>
-                ))}
+            <div className="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-6">
+              <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                {data.cta.whyTitle}
+              </p>
+              <ul className="mt-4 space-y-4 text-sm text-foreground">
+                {data.cta.highlights.map((text, index) => {
+                  const Icon = highlightIcons[index] ?? MessageCircle;
+                  return (
+                    <li key={text} className="flex items-start gap-3">
+                      <div className="rounded-full bg-primary/15 p-2 text-primary">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </div>
+                      <span className="leading-relaxed">{text}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-                {/* ✅ Spinner-enabled button */}
-                <Button
-                  type="submit"
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center"
-                  size="lg"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <>
-                      <svg
-                        className="animate-spin h-5 w-5 mr-2 text-primary-foreground"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        />
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                        />
-                      </svg>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Mail className="h-5 w-5 mr-2" />
-                      {data.form.submitButton.label}
-                    </>
-                  )}
-                </Button>
-              </form>
-            )}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href={discussionLinks.start}
+                className={`inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow transition hover:bg-primary/90 ${buttonDisabledClasses}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-disabled={buttonsDisabled}
+                tabIndex={buttonsDisabled ? -1 : undefined}
+              >
+                {data.cta.buttons.startLabel}
+              </a>
+              <a
+                href={discussionLinks.browse}
+                className={`inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary ${buttonDisabledClasses}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-disabled={buttonsDisabled}
+                tabIndex={buttonsDisabled ? -1 : undefined}
+              >
+                {data.cta.buttons.browseLabel}
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-muted-foreground">
+              {contactEmail ? (
+                <>
+                  Need help drafting your idea?{" "}
+                  <a
+                    href={`mailto:${contactEmail}`}
+                    className="text-primary hover:underline"
+                  >
+                    Email us
+                  </a>{" "}
+                  or open a draft discussion - a maintainer will jump in with
+                  guidance.
+                </>
+              ) : (
+                data.cta.note
+              )}
+            </p>
           </div>
         </div>
       </div>
