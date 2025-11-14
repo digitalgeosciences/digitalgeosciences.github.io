@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "Collaborators",
-    "subtitle": "",
+    "subtitle": "Builders supporting Digital Geosciences projects.",
     "note": ""
   },
   "collaborators": [
@@ -18,10 +18,10 @@
         "github": "https://github.com/qubalee",
         "website": "https://qubalee.com/about",
         "linkedin": "https://linkedin.com/in/qubalee",
-        "twitter": ""
+        "email": "abdullah@qubalee.com"
       }
     },
-        {
+    {
       "name": "Dr. Moujahed Al-Husseini",
       "role": "MEGTScale Facilitator",
       "photo": "/images/avatars/Moujahed-Al-Husseini.jpg",
@@ -34,10 +34,10 @@
         "github": "",
         "website": "https://www.researchgate.net/profile/Moujahed-Al-Husseini",
         "linkedin": "",
-        "twitter": ""
+        "email": ""
       }
     },
-        {
+    {
       "name": "Dr. Denis Anikiev",
       "role": "GeoAI Contributor",
       "photo": "https://avatars.githubusercontent.com/danikiev",
@@ -50,7 +50,7 @@
         "github": "https://github.com/danikiev",
         "website": "https://cpg.kfupm.edu.sa/bio/dr-denis-anikiev/",
         "linkedin": "https://www.linkedin.com/in/denis-anikiev-81690324/",
-        "twitter": ""
+        "email": ""
       }
     }
   ]

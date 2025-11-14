@@ -1,54 +1,30 @@
 {
   "header": {
     "title": "Join or Lead a Project",
-    "subtitle": "Lightweight proposal · Fast review · Open collaboration"
+    "subtitle": "Lightweight proposal | Fast review | Open collaboration"
   },
   "eligibility": {
     "title": "Eligibility & Alignment",
     "description": "Anyone can participate or lead as long as the project aligns with our core objectives in Research, Education, or Consultations.",
     "requirements": [
       "Clear objective mapped to Research, Education, or Consultations",
-      "Data lifecycle plan (acquisition → curation → visualization → modeling)",
+      "Data lifecycle plan (acquisition -> curation -> visualization -> modeling)",
       "Open-source or open-access preference for outputs"
     ]
   },
-  "form": {
-    "title": "Proposal (quick form)",
-    "note": "Please share a brief description of the idea you would like to implement..",
-    "fields": [
-      {
-        "id": "name",
-        "label": "Your name",
-        "type": "text",
-        "required": true,
-        "placeholder": "Your name"
-      },
-      {
-        "id": "email",
-        "label": "Email",
-        "type": "email",
-        "required": true,
-        "placeholder": "lab@example.edu"
-      },
-      {
-        "id": "title",
-        "label": "Project title",
-        "type": "text",
-        "required": true,
-        "placeholder": "Project title"
-      },
-      {
-        "id": "description",
-        "label": "Description",
-        "type": "textarea",
-        "required": true,
-        "placeholder": "A brief description",
-        "rows": 6
-      }
+  "cta": {
+    "title": "Open Collaboration",
+    "description": "Share a brief description of the idea you would like to implement. Move the conversation to GitHub so ideas, context, and follow-ups stay transparent to the whole community.",
+    "whyTitle": "Why GitHub Discussions?",
+    "highlights": [
+      "Start threads with context, attachments, and checklists.",
+      "Mention mentors or subject-matter leads for quicker reviews.",
+      "Link commits, issues, or datasets to keep execution traceable."
     ],
-    "submitButton": {
-      "label": "Submit your proposal",
-      "action": "email"
-    }
+    "buttons": {
+      "startLabel": "Start a Discussion",
+      "browseLabel": "Browse Proposals"
+    },
+    "note": "Need help drafting your idea? Email us or open a draft discussion - a maintainer will jump in with guidance."
   }
 }
