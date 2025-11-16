@@ -150,7 +150,15 @@ const ProjectsSection = () => {
           <div className="flex items-center justify-center space-x-3 mb-4">
             <Package className="h-8 w-8 text-primary" />
             <h2 className="text-3xl md:text-4xl font-bold text-foreground font-heading">
-              {data.header.title}
+              <Link
+                to="/projects-and-collaborators"
+                className="group inline-flex items-center gap-2"
+              >
+                <span>{data.header.title}</span>
+                <span className="text-[0.6rem] uppercase tracking-[0.4em] text-primary opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
+                  SEE MORE &gt;&gt;
+                </span>
+              </Link>
             </h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
