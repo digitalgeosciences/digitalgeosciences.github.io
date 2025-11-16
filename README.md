@@ -41,4 +41,4 @@ Edit the JSON files in `public/data/` to update collaborators, announcements, pr
 Run `npm run build` to populate `dist/` with the optimized static site. Deploy the contents of `dist/` to your preferred static host (Vercel, Netlify, GitHub Pages, etc.). Every JSON/data change requires rebuilding before deployment, since the files are bundled into the output.
 
 ## Contact
-For questions or to suggest updates, reach out to `info@digitalgeosciences.com` or open an issue on the [GitHub organization](https://github.com/digitalgeosciences).
+For questions or to suggest updates, reach out to `info@digitalgeosciences.com` or open an issue on the [GitHub](https://github.com/digitalgeosciences/digitalgeosciences.github.io/issues).
