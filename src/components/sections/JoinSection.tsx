@@ -87,8 +87,8 @@ const JoinSection = () => {
                 className="group inline-flex items-center gap-2"
               >
                 <span>{data.header.title}</span>
-                <span className="text-[0.6rem] uppercase tracking-[0.4em] text-primary opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
-                  SEE MORE &gt;&gt;
+                <span className="text-[0.6rem] uppercase tracking-[0.4em] text-primary transition-colors duration-200 group-hover:text-primary/80">
+                  VIEW ALL
                 </span>
               </Link>
             </h2>

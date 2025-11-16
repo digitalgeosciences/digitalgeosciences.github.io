@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Globe, Github, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -113,14 +114,22 @@ const ProjectsAndCollaborators = () => {
             <h1 className="text-3xl font-bold text-foreground">
               Builders supporting Digital Geosciences projects.
             </h1>
-            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground justify-end">
-              <span>
-                {projects.length} project{projects.length === 1 ? "" : "s"}
-              </span>
-              <span>
-                {collaborators.length} collaborator
-                {collaborators.length === 1 ? "" : "s"}
-              </span>
+            <div className="flex flex-col gap-3 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-wrap gap-6">
+                <span>
+                  {projects.length} project{projects.length === 1 ? "" : "s"}
+                </span>
+                <span>
+                  {collaborators.length} collaborator
+                  {collaborators.length === 1 ? "" : "s"}
+                </span>
+              </div>
+              <Link
+                to="/"
+                className="text-sm font-semibold uppercase tracking-[0.4em] text-primary hover:text-primary/80 transition-colors"
+              >
+                Back home
+              </Link>
             </div>
           </div>
 
