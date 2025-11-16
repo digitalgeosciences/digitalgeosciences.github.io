@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Users, Clock, Github, Globe, Linkedin, Mail, User } from "lucide-react";
 
 interface Collaborator {
@@ -157,12 +158,12 @@ const CollaboratorsSection = () => {
                       </span>
                     </div>
                     {hasExtraProjects ? (
-                      <a
-                        href="/projects-and-collaborators"
+                      <Link
+                        to="/projects-and-collaborators"
                         className="text-[0.75rem] font-semibold uppercase tracking-widest text-primary hover:text-primary/80"
                       >
                         More
-                      </a>
+                      </Link>
                     ) : null}
                   </div>
 
