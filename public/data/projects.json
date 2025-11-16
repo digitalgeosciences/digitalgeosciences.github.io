@@ -6,7 +6,7 @@
   "projects": [
     {
       "id": "notes",
-      "title": "Geoscientific Notes",
+      "title": "GeoNotes",
       "description": "Web-based platform to publish geoscience research and educational notes. Explore 'ALQUBALEE Notes' as an example.",
       "url": "https://qubalee.com",
       "icon": "book",
@@ -14,18 +14,10 @@
     },
     {
       "id": "OpenGeo",
-      "title": "Open Geosciences (OpenGeo)",
+      "title": "OpenGeo",
       "description": "A living index of open geoscience software, datasets, and courses that keeps researchers, educators, and students aligned on the latest collaborative tools.",
       "url": "https://digitalgeosciences.com/opengeo",
       "icon": "globe",
-      "external": true
-    },
-    {
-      "id": "AML",
-      "title": "LabManager",
-      "description": "A web-based platform to manage research laboratories. This ongoing project is led by Dr. Alqubalee, and its concept is currently operational at the Automated Mineralogy Lab.",
-      "url": "https://cpg.kfupm.edu.sa/aml",
-      "icon": "microscope",
       "external": true
     },
     {
@@ -38,7 +30,7 @@
     },
     {
       "id": "localAI",
-      "title": "Local AI Platform",
+      "title": "Local AI",
       "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation.",
       "url": "https://geo.local",
       "icon": "ai",

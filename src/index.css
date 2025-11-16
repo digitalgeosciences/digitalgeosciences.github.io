@@ -89,3 +89,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .table-compact th,
+  .table-compact td {
+    padding: 6px 10px;
+    line-height: 1.25;
+    vertical-align: top;
+  }
+}

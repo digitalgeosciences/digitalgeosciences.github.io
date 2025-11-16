@@ -19,7 +19,41 @@
         "website": "https://qubalee.com/about",
         "linkedin": "https://linkedin.com/in/qubalee",
         "email": "abdullah@qubalee.com"
-      }
+      },
+      "projects": [
+        {
+          "name": "GeoNotes",
+          "url": "https://qubalee.github.io"
+        },
+        {
+          "name": "OpenGeo",
+          "url": "https://digitalgeosciences.com/opengeo"
+        },
+        {
+          "name": "GeoPodcast",
+          "url": "https://creators.spotify.com/pod/profile/qubalee/"
+        },
+        {
+          "name": "MEGTScale",
+          "url": "https://megtscale.com"
+        },
+        {
+          "name": "Geoscience Arabia",
+          "url": "https://geoarabia.com"
+        },
+        {
+          "name": "Local AI",
+          "url": "https://megtscale.com"
+        },
+        {
+          "name": "GeoGallery",
+          "url": "#"
+        },
+        {
+          "name": "GeoPrompts",
+          "url": "#"
+        }
+      ]
     },
     {
       "name": "Dr. Moujahed Al-Husseini",
@@ -34,8 +68,14 @@
         "github": "",
         "website": "https://www.researchgate.net/profile/Moujahed-Al-Husseini",
         "linkedin": "",
-        "email": "moujaheda@gmail.com"
-      }
+        "email": ""
+      },
+      "projects": [
+        {
+          "name": "MEGTScale",
+          "url": "https://megtscale.com"
+        }
+      ]
     },
     {
       "name": "Dr. Denis Anikiev",
@@ -51,7 +91,13 @@
         "website": "https://cpg.kfupm.edu.sa/bio/dr-denis-anikiev/",
         "linkedin": "https://www.linkedin.com/in/denis-anikiev-81690324/",
         "email": "denis.anikiev@kfupm.edu.sa"
-      }
+      },
+      "projects": [
+        {
+          "name": "Local AI",
+          "url": "https://geo.local"
+        }
+      ]
     }
   ]
 }
