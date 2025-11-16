@@ -13,7 +13,7 @@
         "label": "View on GitHub",
         "variant": "secondary",
         "action": "link",
-        "target": "https://github.com/digitalgeosciences",
+        "target": "https://github.com/orgs/digitalgeosciences/discussions",
         "icon": "github"
       }
     ]
