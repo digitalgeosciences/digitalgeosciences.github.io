@@ -56,28 +56,6 @@
       ]
     },
     {
-      "name": "Dr. Moujahed Al-Husseini",
-      "role": "MEGTScale Facilitator",
-      "photo": "/images/avatars/Moujahed-Al-Husseini.jpg",
-      "participation": {
-        "start": "2025-08",
-        "end": "Present",
-        "status": "inactive"
-      },
-      "links": {
-        "github": "",
-        "website": "https://www.researchgate.net/profile/Moujahed-Al-Husseini",
-        "linkedin": "",
-        "email": ""
-      },
-      "projects": [
-        {
-          "name": "MEGTScale",
-          "url": "https://megtscale.com"
-        }
-      ]
-    },
-    {
       "name": "Dr. Denis Anikiev",
       "role": "GeoAI Contributor",
       "photo": "https://avatars.githubusercontent.com/danikiev",
