@@ -98,7 +98,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GeoArabia Community
+                  Geoscience Arabia
                 </a>
               </div>
             </div>
