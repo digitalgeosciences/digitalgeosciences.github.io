@@ -37,10 +37,10 @@
       "external": true
     },
     {
-      "id": "MEGTScale",
-      "title": "MEGTScale",
-      "description": "The Middle East Geologic Time Scale project, led by Dr. Al-Husseini and Dr. Alqubalee, aims to enhance the understanding of the region's geological history.",
-      "url": "https://megtscale.com",
+      "id": "FutureGeo",
+      "title": "FutureGeo",
+      "description": "GEOSCIENCES for the future.",
+      "url": "https://digitalgeosciences.com/futuregeo",
       "icon": "layers",
       "external": true
     },
