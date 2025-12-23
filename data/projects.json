@@ -21,6 +21,22 @@
       "external": true
     },
     {
+      "id": "FutureGeo",
+      "title": "FutureGeo",
+      "description": "GEOSCIENCES for the future. An interactive web-page experience showing how geoscientists advance the UN Sustainable Development Goals, with insights, impact stories, and discipline highlights.",
+      "url": "https://digitalgeosciences.com/futuregeo",
+      "icon": "layers",
+      "external": true
+    },
+    {
+      "id": "GeoArabiaDashboard",
+      "title": "GeoArabia Dashboard",
+      "description": "Understand the Geoscientific Research Landscape of Arabia via the GeoArabia Dashboard",
+      "url": "https://geoarabia.com/idb",
+      "icon": "map",
+      "external": true
+    },
+    {
       "id": "GeoPodcast",
       "title": "GeoPodcast",
       "description": "A geoscience podcast (AI DeepDive).",
@@ -34,22 +50,6 @@
       "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation.",
       "url": "https://geo.local",
       "icon": "ai",
-      "external": true
-    },
-    {
-      "id": "FutureGeo",
-      "title": "FutureGeo",
-      "description": "GEOSCIENCES for the future. An interactive web-page experience showing how geoscientists advance the UN Sustainable Development Goals, with insights, impact stories, and discipline highlights.",
-      "url": "https://digitalgeosciences.com/futuregeo",
-      "icon": "layers",
-      "external": true
-    },
-    {
-      "id": "GeoArabia",
-      "title": "Geoscience Arabia",
-      "description": "GeoArabia Community - coming soon!",
-      "url": "https://geoarabia.com",
-      "icon": "map",
       "external": true
     },
     {
