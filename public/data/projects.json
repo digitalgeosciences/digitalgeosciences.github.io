@@ -9,6 +9,12 @@
       "title": "GeoNotes",
       "description": "Web-based platform to publish geoscience research and educational notes. Explore 'ALQUBALEE Notes' as an example.",
       "url": "https://qubalee.com",
+      "links": [
+        {
+          "type": "live",
+          "url": "https://qubalee.com"
+        }
+      ],
       "icon": "book",
       "external": true
     },
@@ -17,6 +23,27 @@
       "title": "OpenGeo",
       "description": "A living index of open geoscience software, datasets, and courses that keeps researchers, educators, and students aligned on the latest collaborative tools.",
       "url": "https://digitalgeosciences.com/opengeo",
+      "links": [
+        {
+          "type": "live",
+          "url": "https://digitalgeosciences.com/opengeo"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/digitalgeosciences/opengeo",
+          "label": "GitHub repo"
+        },
+        {
+          "type": "zenodo",
+          "url": "https://doi.org/10.5281/zenodo.17915411",
+          "label": "Zenodo record"
+        },
+        {
+          "type": "info",
+          "url": "https://qubalee.com/posts/2025/11/opengeo/",
+          "label": "More info"
+        }
+      ],
       "icon": "globe",
       "external": true
     },
@@ -25,6 +52,12 @@
       "title": "FutureGeo",
       "description": "GEOSCIENCES for the future. An interactive web-page experience showing how geoscientists advance the UN Sustainable Development Goals, with insights, impact stories, and discipline highlights.",
       "url": "https://digitalgeosciences.com/futuregeo",
+      "links": [
+        {
+          "type": "live",
+          "url": "https://digitalgeosciences.com/futuregeo"
+        }
+      ],
       "icon": "layers",
       "external": true
     },
@@ -33,6 +66,12 @@
       "title": "GeoArabia Dashboard",
       "description": "Understand the Geoscientific Research Landscape of Arabia via the GeoArabia Dashboard",
       "url": "https://geoarabia.com/idb",
+      "links": [
+        {
+          "type": "live",
+          "url": "https://geoarabia.com/idb"
+        }
+      ],
       "icon": "map",
       "external": true
     },
@@ -41,6 +80,12 @@
       "title": "GeoPodcast",
       "description": "A geoscience podcast (AI DeepDive).",
       "url": "https://creators.spotify.com/pod/profile/geopodcasts/",
+      "links": [
+        {
+          "type": "live",
+          "url": "https://creators.spotify.com/pod/profile/geopodcasts/"
+        }
+      ],
       "icon": "podcast",
       "external": true
     },
@@ -49,6 +94,12 @@
       "title": "Local AI",
       "description": "A local generative AI platform designed for interaction with open-source AI models, enabling text, image, and audio generation.",
       "url": "https://geo.local",
+      "links": [
+        {
+          "type": "live",
+          "url": "https://geo.local"
+        }
+      ],
       "icon": "ai",
       "external": true
     },
@@ -57,6 +108,12 @@
       "title": "GeoGallery",
       "description": "Explore our geological photo collection - coming soon!",
       "url": "#",
+      "links": [
+        {
+          "type": "live",
+          "url": "#"
+        }
+      ],
       "icon": "mountain",
       "external": false
     },
@@ -65,6 +122,12 @@
       "title": "GeoPrompts",
       "description": "A prompt library of Earth's imagined features, based on geoscientists' descriptions and visualized with large language models (LLMs) - coming soon!",
       "url": "#",
+      "links": [
+        {
+          "type": "live",
+          "url": "#"
+        }
+      ],
       "icon": "eye",
       "external": false
     }

@@ -20,9 +20,19 @@ import {
   Droplets,
   Ruler,
   Beaker,
-  ChevronRight
+  Github,
+  Archive,
+  ExternalLink,
+  Info
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import type { LucideIcon } from "lucide-react";
+
+interface ProjectLink {
+  type: string;
+  url: string;
+  label?: string;
+  external?: boolean;
+}
 
 interface Project {
   id: string;
@@ -31,6 +41,7 @@ interface Project {
   url?: string;
   icon: string;
   external?: boolean;
+  links?: ProjectLink[];
 }
 
 interface ProjectsData {
@@ -53,6 +64,22 @@ const ProjectsSection = () => {
       .then(setData)
       .catch(console.error);
   }, []);
+
+  const linkMeta: Record<
+    string,
+    {
+      label: string;
+      Icon: LucideIcon;
+    }
+  > = {
+    live: { label: "Live site", Icon: ExternalLink },
+    github: { label: "GitHub repo", Icon: Github },
+    zenodo: { label: "Zenodo record", Icon: Archive },
+    dataset: { label: "Dataset", Icon: Database },
+    info: { label: "More info", Icon: Info },
+    docs: { label: "Documentation", Icon: FileText },
+    default: { label: "Open link", Icon: ExternalLink }
+  };
 
   const getIcon = (iconName: string) => {
     switch (iconName?.toLowerCase()) {
@@ -131,6 +158,11 @@ const ProjectsSection = () => {
     }
   };
 
+  const getLinkMeta = (type: string) => {
+    const key = type?.toLowerCase();
+    return linkMeta[key] ?? linkMeta.default;
+  };
+
   if (!data) return null;
 
   const filteredProjects = data.projects.filter(
@@ -184,29 +216,41 @@ const ProjectsSection = () => {
                 {project.description}
               </p>
 
-              {/* Learn More Button */}
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground group mt-auto"
-              >
-                {project.external && project.url ? (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>Learn More</span>
-                    <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
-                  </a>
-                ) : (
-                  <Link to={`/projects/${project.id}`}>
-                    <span>Learn More</span>
-                    <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
-                  </Link>
+              <div className="mt-auto">
+                {(project.links?.length || project.url) && (
+                  <div className="flex items-center gap-2">
+                    {(project.links?.length
+                      ? project.links
+                      : project.url
+                        ? [
+                            {
+                              type: project.external ? "live" : "internal",
+                              url: project.url,
+                              external: project.external,
+                              label: "Open link"
+                            }
+                          ]
+                        : []
+                    ).map((link) => {
+                      const { label, Icon } = getLinkMeta(link.type);
+                      const isExternal =
+                        link.external ?? project.external ?? true;
+                      return (
+                        <a
+                          key={`${project.id}-${link.type}-${link.url}`}
+                          href={link.url}
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-card-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                          title={link.label ?? label}
+                        >
+                          <Icon className="h-5 w-5" />
+                        </a>
+                      );
+                    })}
+                  </div>
                 )}
-              </Button>
+              </div>
             </div>
           ))}
         </div>
