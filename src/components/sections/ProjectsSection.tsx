@@ -167,11 +167,11 @@ const ProjectsSection = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-stretch">
           {displayedProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-card border border-card-border rounded-lg p-6 shadow-card hover:shadow-md transition-all group"
+              className="bg-card border border-card-border rounded-lg p-6 shadow-card hover:shadow-md transition-all group h-full flex flex-col"
             >
               <div className="flex items-center space-x-3 mb-4">
                 {getIcon(project.icon)}
@@ -180,7 +180,7 @@ const ProjectsSection = () => {
                 </h3>
               </div>
 
-              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed line-clamp-3">
                 {project.description}
               </p>
 
@@ -189,7 +189,7 @@ const ProjectsSection = () => {
                 asChild
                 variant="outline"
                 size="sm"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground group"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground group mt-auto"
               >
                 {project.external && project.url ? (
                   <a
