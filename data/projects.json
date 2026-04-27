@@ -13,6 +13,11 @@
         {
           "type": "live",
           "url": "https://qubalee.com"
+        },
+        {
+          "type": "info",
+          "url": "https://qubalee.com/posts/2025/04/hello-world/",
+          "label": "More info"
         }
       ],
       "icon": "book",
@@ -56,6 +61,21 @@
         {
           "type": "live",
           "url": "https://digitalgeosciences.com/futuregeo"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/digitalgeosciences/futuregeo",
+          "label": "GitHub repo"
+        },
+        {
+          "type": "zenodo",
+          "url": "https://doi.org/10.5281/zenodo.17915560",
+          "label": "Zenodo record"
+        },
+        {
+          "type": "info",
+          "url": "https://digitalgeosciences.com/futuregeo/insights/2025-11-23-futuregeo-website-overview",
+          "label": "More info"
         }
       ],
       "icon": "layers",
@@ -70,6 +90,11 @@
         {
           "type": "live",
           "url": "https://geoarabia.com/idb"
+        },
+        {
+          "type": "info",
+          "url": "https://qubalee.com/posts/2025/12/geoarabia-dashboard/",
+          "label": "More info"
         }
       ],
       "icon": "map",
