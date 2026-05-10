@@ -38,8 +38,8 @@
           "url": "https://digitalgeosciences.com/futuregeo"
         },
         {
-          "name": "Geoscience Arabia",
-          "url": "https://geoarabia.com"
+          "name": "GeoArabia Dashboard",
+          "url": "https://geoarabia.com/idb"
         },
         {
           "name": "Local AI",
@@ -61,8 +61,8 @@
       "photo": "https://avatars.githubusercontent.com/danikiev",
       "participation": {
         "start": "2025-08",
-        "end": "Present",
-        "status": "active"
+        "end": "2025-12",
+        "status": "Inactive"
       },
       "links": {
         "github": "https://github.com/danikiev",
