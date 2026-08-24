@@ -76,6 +76,30 @@
           "url": "https://geo.local"
         }
       ]
+    },
+    {
+      "name": "Mr. Naif Alqubalee",
+      "role": "Backend Engineer",
+      "photo": "/images/avatars/naif.jpeg",
+      "participation": {
+        "start": "2026-08",
+        "end": "Present",
+        "status": "Active"
+      },
+      "links": {
+        "github": "https://github.com/nq001",
+        "website": "https://naif.qubalee.com",
+        "linkedin": "https://www.linkedin.com/in/naifalqubalee/",
+        "email": "naif@qubalee.com"
+      },
+      "projects": [
+        {
+          "name": "Ofoq"
+        },
+        {
+          "name": "local AI"
+        }
+      ]
     }
   ]
 }
