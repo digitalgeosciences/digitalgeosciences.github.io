@@ -6,7 +6,7 @@
   "projects": [
     {
       "id": "notes",
-      "title": "GeoNotes",
+      "title": "ALQUBALEE Notes",
       "description": "Web-based platform to publish geoscience research and educational notes. Explore 'ALQUBALEE Notes' as an example.",
       "url": "https://qubalee.com",
       "links": [
@@ -85,11 +85,11 @@
       "id": "GeoArabiaDashboard",
       "title": "GeoArabia Dashboard",
       "description": "Understand the Geoscientific Research Landscape of Arabia via the GeoArabia Dashboard",
-      "url": "https://geoarabia.com/idb",
+      "url": "https://geoarabia.com/",
       "links": [
         {
           "type": "live",
-          "url": "https://geoarabia.com/idb"
+          "url": "https://geoarabia.com/"
         },
         {
           "type": "info",
